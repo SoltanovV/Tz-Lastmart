@@ -25,12 +25,7 @@ public class Point
     /// <summary>
     /// Цвет точки
     /// </summary>
-    public string Color { get; set; }
+    public string? Color { get; set; }
 
-    /// <summary>
-    /// Ключ
-    /// </summary>
-    public int CommentId { get; set; }
-
-    public IEnumerable<Comment> Comment{ get; set; }
+    public List<Comment>? Comment { get; set; }
 }

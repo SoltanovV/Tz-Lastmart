@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Tz_Lastmart.Models;
 
 namespace Tz_Lastmart.Controllers
@@ -23,7 +24,8 @@ namespace Tz_Lastmart.Controllers
             try
             {
                 _logger.LogInformation("Запрос получен");
-                return Ok(_db.Point);
+                var point = _db.Point.Include(p => p.Comment).ToList();
+                return Ok(point);
             }
             catch(Exception ex)
             {

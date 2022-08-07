@@ -1,4 +1,6 @@
-﻿namespace Tz_Lastmart.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Tz_Lastmart.Models
 {
     public class Comment
     {
@@ -10,12 +12,12 @@
         /// <summary>
         /// Текст комментария
         /// </summary>
-        public string Text { get; set; }
+        public string? Text { get; set; }
 
         /// <summary>
         /// Цвет блока
         /// </summary>
-        public string BackgroundColor { get; set; }
+        public string? BackgroundColor { get; set; }
 
         /// <summary>
         /// Ключ 
